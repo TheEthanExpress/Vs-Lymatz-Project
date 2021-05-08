@@ -495,6 +495,25 @@ class Character extends FlxSprite
 				addOffset("singDOWN-alt", -30, -27);
 
 				playAnim('idle');
+
+			case 'lightning':
+				//franes
+				frames = Paths.getSparrowAtlas('weekl/lightning_assets');
+
+				animation.addByPrefix('idle',"lightning idle",24,false);
+				animation.addByPrefix('singUP',"lightning left",24,false);
+				animation.addByPrefix('singDOWN',"lightning down",24,false);
+				animation.addByPrefix('singLEFT',"lightning up",24,false);
+				animation.addByPrefix('singRIGHT',"lightning right",24,false);
+
+				addOffset('idle');
+				addOffset("singUP", -20, 50);
+				addOffset("singRIGHT", -51);
+				addOffset("singLEFT", -30);
+				addOffset("singDOWN", -30, -40);
+				
+				playAnim('idle');
+
 		}
 
 		dance();
